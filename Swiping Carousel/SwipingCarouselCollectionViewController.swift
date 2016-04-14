@@ -14,19 +14,14 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.frame = CGRectMake(0, 200, view.bounds.width, 204)
+        view.backgroundColor = UIColor(red:0.439,  green:0.411,  blue:0.927, alpha:1)
+        collectionView?.frame = CGRectMake(0, 200, view.bounds.width, 120)
         collectionView?.bounces = true
     }
     
     // MARK: Model
     // Load allTheCards from SavedCards Class.
     private var allTheCards = SavedCards.loadCards()
-    
-    private struct Constants {
-        static let LikedImage = "Liked"
-        static let DislikedImage = "Disliked"
-        static let SegueIdentifier = "OpenChat"
-    }
     
     
     // MARK: UICollectionViewDataSource
@@ -50,23 +45,6 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
     
     
     //MARK: Segue Navigation
-    
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        
-        if identifier == Constants.SegueIdentifier {
-            if let selectedRowIndex = collectionView!.indexPathsForSelectedItems()!.last {
-                if let cell = collectionView?.cellForItemAtIndexPath(selectedRowIndex) {
-                    //We check if the selected Card is the one in the middle to open the chat. If it's not, we scroll to the side card selected.
-                    if cell.frame.size.height > cell.bounds.size.height {
-                        return true
-                    } else {
-                        collectionView?.scrollToItemAtIndexPath(selectedRowIndex, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: true)
-                        return false
-                    }
-                }
-            }
-        }
-        
-        return true
-    }
+  
+
 }

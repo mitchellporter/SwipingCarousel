@@ -30,7 +30,7 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
         //These numbers will depend on the size of your cards you have set in the CardsViewFlowConstants.
         //60 - will let the first and last card of the CollectionView to be centered.
         //100 - will avoid the double rows in the CollectionView
-        sectionInset = UIEdgeInsetsMake(0.0, (collectionView!.bounds.width/2) + (CardsViewFlowConstants.itemWidth), 0.0, (collectionView!.bounds.width/2) + (CardsViewFlowConstants.itemWidth))
+        sectionInset = UIEdgeInsetsMake(-64.0, (collectionView!.bounds.width/2) + (CardsViewFlowConstants.itemWidth), 0.0, (collectionView!.bounds.width/2) + (CardsViewFlowConstants.itemWidth))
     }
     
     // Here is where the magic happens

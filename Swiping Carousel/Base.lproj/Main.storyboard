@@ -9,13 +9,15 @@
         <scene sceneID="6ra-H0-6Oz">
             <objects>
                 <collectionViewController extendedLayoutIncludesOpaqueBars="YES" id="802-gR-r46" customClass="SwipingCarouselCollectionViewController" customModule="Swiping_Carousel" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="exg-zA-eSt">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="exg-zA-eSt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.32549019610000002" green="0.25098039220000001" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewLayout key="collectionViewLayout" id="MYq-di-7ba" customClass="CardsViewFlowLayout" customModule="Swiping_Carousel" customModuleProvider="target"/>
                         <containerView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="EOx-C9-Kxz">
                             <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" red="0.32549019607843138" green="0.25098039215686274" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="CFe-66-wW2" kind="embed" id="T9a-v5-8Qu"/>
                             </connections>
