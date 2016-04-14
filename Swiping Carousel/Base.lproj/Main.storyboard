@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4X5-Ve-P4z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4X5-Ve-P4z">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Swiping Carousel-->
@@ -9,11 +10,11 @@
             <objects>
                 <collectionViewController extendedLayoutIncludesOpaqueBars="YES" id="802-gR-r46" customClass="SwipingCarouselCollectionViewController" customModule="Swiping_Carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="exg-zA-eSt">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewLayout key="collectionViewLayout" id="MYq-di-7ba" customClass="CardsViewFlowLayout" customModule="Swiping_Carousel" customModuleProvider="target"/>
                         <containerView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="EOx-C9-Kxz">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <connections>
                                 <segue destination="CFe-66-wW2" kind="embed" id="T9a-v5-8Qu"/>
@@ -21,55 +22,30 @@
                         </containerView>
                         <cells>
                             <collectionViewCell multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Card" id="Alz-sX-f71" customClass="CardCollectionViewCell" customModule="Swiping_Carousel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="54" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="210" height="278"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="54" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lu5-6A-0co">
-                                            <rect key="frame" x="8" y="8" width="55" height="55"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lu5-6A-0co">
+                                            <rect key="frame" x="-0.5" y="19.5" width="55" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="Qil-eT-7Eg"/>
+                                                <constraint firstAttribute="width" constant="55" id="eHi-6k-KGR"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOP-cs-OLC">
-                                            <rect key="frame" x="71" y="16" width="131" height="20"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profession" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nb-JO-gdd">
-                                            <rect key="frame" x="71" y="36" width="131" height="20"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6C-Ko-Rc9">
-                                            <rect key="frame" x="8" y="71" width="194" height="166"/>
-                                            <string key="text">Main Description: Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MAW-PN-Bdd">
-                                            <rect key="frame" x="177" y="245" width="25" height="25"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uux-Pi-5XW">
-                                            <rect key="frame" x="8" y="245" width="161" height="25"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.792156862745098" green="0.52156862745098043" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
-                                <size key="customSize" width="210" height="278"/>
+                                <constraints>
+                                    <constraint firstItem="Lu5-6A-0co" firstAttribute="centerX" secondItem="Alz-sX-f71" secondAttribute="centerX" id="MFg-Kj-BNl"/>
+                                    <constraint firstItem="Lu5-6A-0co" firstAttribute="centerY" secondItem="Alz-sX-f71" secondAttribute="centerY" id="j87-F6-zCv"/>
+                                </constraints>
+                                <size key="customSize" width="54" height="94"/>
                                 <connections>
-                                    <outlet property="activityLabel" destination="Uux-Pi-5XW" id="SfL-ay-e8O"/>
-                                    <outlet property="likeImage" destination="MAW-PN-Bdd" id="q20-6w-dcK"/>
-                                    <outlet property="mainDescriptionLabel" destination="v6C-Ko-Rc9" id="bn3-5v-kEa"/>
-                                    <outlet property="nameLabel" destination="QOP-cs-OLC" id="3c9-sq-KL7"/>
-                                    <outlet property="professionLabel" destination="3Nb-JO-gdd" id="ZLh-1L-5pH"/>
                                     <outlet property="profileImage" destination="Lu5-6A-0co" id="JjR-xF-fVC"/>
                                     <segue destination="Ha1-SK-IG1" kind="show" identifier="OpenChat" id="zXx-5Q-p8E"/>
                                 </connections>
@@ -95,7 +71,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RPc-2Q-Ohu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gob-4Z-5YI">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.36470588240000001" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
