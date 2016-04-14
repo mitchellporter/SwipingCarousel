@@ -15,8 +15,10 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red:0.439,  green:0.411,  blue:0.927, alpha:1)
-        collectionView?.frame = CGRectMake(0, 200, view.bounds.width, 120)
+        collectionView?.frame = CGRectMake(0, view.bounds.maxY - 120, view.bounds.width, 120)
         collectionView?.bounces = true
+        collectionView?.clipsToBounds = false
+        collectionView?.backgroundColor = UIColor.clearColor()
     }
     
     // MARK: Model
