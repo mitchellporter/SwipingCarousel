@@ -19,6 +19,12 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
         collectionView?.bounces = true
         collectionView?.clipsToBounds = false
         collectionView?.backgroundColor = UIColor.clearColor()
+        
+//        let selectedCellView = UIView(frame: CGRectMake(collectionView!.center.x, 0, 54, 94))
+//        selectedCellView.backgroundColor = UIColor.whiteColor()
+//        selectedCellView.alpha = 0.6
+//        collectionView?.addSubview(selectedCellView)
+//        collectionView?.bringSubviewToFront(selectedCellView)
     }
     
     // MARK: Model
