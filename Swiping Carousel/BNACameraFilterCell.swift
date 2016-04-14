@@ -9,10 +9,11 @@
 import UIKit
 
 //Protocol to inform its delegate of a Card being swiped up or down.
-protocol CardViewCellDelegate : class {
+protocol BNACameraFilterCellDelegate : class {
+    
 }
 
-class CardCollectionViewCell: UICollectionViewCell {
+class BNACameraFilterCell: UICollectionViewCell {
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,7 +22,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var likeImage: UIImageView!
     
-    weak var delegate: CardViewCellDelegate?
+    weak var delegate: BNACameraFilterCellDelegate?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

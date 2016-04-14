@@ -13,9 +13,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.32549019610000002" green="0.25098039220000001" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewLayout key="collectionViewLayout" id="MYq-di-7ba" customClass="CardsViewFlowLayout" customModule="Swiping_Carousel" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="MYq-di-7ba" customClass="FiltersFlowLayout" customModule="Swiping_Carousel" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Card" id="Alz-sX-f71" customClass="CardCollectionViewCell" customModule="Swiping_Carousel" customModuleProvider="target">
+                            <collectionViewCell multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Alz-sX-f71" customClass="BNACameraFilterCell" customModule="Swiping_Carousel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="54" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -40,8 +40,7 @@
                                 </constraints>
                                 <size key="customSize" width="54" height="94"/>
                                 <connections>
-                                    <outlet property="profileImage" destination="Lu5-6A-0co" id="JjR-xF-fVC"/>
-                                    <segue destination="Ha1-SK-IG1" kind="show" identifier="OpenChat" id="zXx-5Q-p8E"/>
+                                    <outlet property="profileImage" destination="Lu5-6A-0co" id="xd7-HH-h1I"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

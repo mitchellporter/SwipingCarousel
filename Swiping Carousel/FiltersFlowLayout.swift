@@ -9,10 +9,10 @@
 import UIKit
 
 
-class CardsViewFlowLayout:  UICollectionViewFlowLayout {
+class FiltersFlowLayout:  UICollectionViewFlowLayout {
     
     // Mark: Constants
-    private struct CardsViewFlowConstants {
+    private struct FiltersFlowConstants {
         static let activeDistance: CGFloat = 100
         static let zoomFactor: CGFloat = 0.2
         static let itemWidth: CGFloat = 54       //Width of the Cell.
@@ -24,13 +24,13 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
     override func prepareLayout() {
         super.prepareLayout()
         
-        itemSize = CGSizeMake(CardsViewFlowConstants.itemWidth, CardsViewFlowConstants.itemHeight)
+        itemSize = CGSizeMake(FiltersFlowConstants.itemWidth, FiltersFlowConstants.itemHeight)
         scrollDirection = .Horizontal
-        minimumLineSpacing = CardsViewFlowConstants.minLineSpacing
+        minimumLineSpacing = FiltersFlowConstants.minLineSpacing
         //These numbers will depend on the size of your cards you have set in the CardsViewFlowConstants.
         //60 - will let the first and last card of the CollectionView to be centered.
         //100 - will avoid the double rows in the CollectionView
-        sectionInset = UIEdgeInsetsMake(-64.0, (collectionView!.bounds.width/2) + (CardsViewFlowConstants.itemWidth), 0.0, (collectionView!.bounds.width/2) + (CardsViewFlowConstants.itemWidth))
+        sectionInset = UIEdgeInsetsMake(-64.0, (collectionView!.bounds.width/2) + (FiltersFlowConstants.itemWidth), 0.0, (collectionView!.bounds.width/2) + (FiltersFlowConstants.itemWidth))
     }
     
     // Here is where the magic happens
@@ -47,9 +47,9 @@ class CardsViewFlowLayout:  UICollectionViewFlowLayout {
             let newAttributes: UICollectionViewLayoutAttributes = attributes
             if CGRectIntersectsRect(attributes.frame, rect) {
                 let distance = CGRectGetMidX(visibleRect) - attributes.center.x
-                let normalizedDistance = distance / CardsViewFlowConstants.activeDistance
-                if (abs(distance)) < CardsViewFlowConstants.activeDistance {
-                    let zoom = 1 + CardsViewFlowConstants.zoomFactor*(1 - abs(normalizedDistance))
+                let normalizedDistance = distance / FiltersFlowConstants.activeDistance
+                if (abs(distance)) < FiltersFlowConstants.activeDistance {
+                    let zoom = 1 + FiltersFlowConstants.zoomFactor*(1 - abs(normalizedDistance))
                     newAttributes.transform3D = CATransform3DMakeScale(zoom, zoom, 1.0)
                     newAttributes.zIndex = 1
                 }

@@ -8,9 +8,9 @@
 
 import UIKit
 
-let reuseIdentifier = "Card"
+let reuseIdentifier = "cell"
 
-class SwipingCarouselCollectionViewController: UICollectionViewController, CardViewCellDelegate{
+class SwipingCarouselCollectionViewController: UICollectionViewController, BNACameraFilterCellDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,7 @@ class SwipingCarouselCollectionViewController: UICollectionViewController, CardV
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CardCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! BNACameraFilterCell
         
         // Configure the cell
         let currentCard = allTheCards[indexPath.row]
